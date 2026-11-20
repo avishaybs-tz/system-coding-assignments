@@ -19,15 +19,15 @@ public class Item {
         this.isMagical = isMagical;
     }
 
-    public String getName() {
+    public String getItemName() {
         return name;
     }
 
-    public int getValue() {
+    public int getVal() {
         return value;
     }
 
-    public boolean isMagical() {
+    public boolean getIsMagical() {
         return isMagical;
     }
 
@@ -40,6 +40,6 @@ public class Item {
     }
 
     public String toString() {
-        return "Item Name: " + name + ", Cost: " + value;
+        return "Name: " + name + "\nValue: " + value + "\nMagical item";
     }
 }

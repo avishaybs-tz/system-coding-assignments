@@ -7,30 +7,31 @@ public class Item {
     private int value;
     private boolean isMagical;
 
+    // בנאי ברירת מחדל
     public Item() {
         this.name = "Unknown";
         this.value = 0;
         this.isMagical = false;
     }
 
+    // בנאי עם פרמטרים
     public Item(String name, int value, boolean isMagical) {
         this.name = name;
-        this.value = value;
+        setValue(value); // שימוש בסט כדי לוודא תקינות ערך שלילי
         this.isMagical = isMagical;
     }
 
-    public String getItemName() {
+    // מחזירה את שם החפץ
+    public String getName() {
         return name;
     }
 
-    public int getVal() {
+    // מחזירה את ערך החפץ
+    public int getValue() {
         return value;
     }
 
-    public boolean getIsMagical() {
-        return isMagical;
-    }
-
+    // מעדכנת את הערך, במידה ושלילי ומאתחלת לאפס
     public void setValue(int value) {
         if (value < 0) {
             this.value = 0;
@@ -39,7 +40,17 @@ public class Item {
         }
     }
 
+    // מחזירה האם החפץ קסום
+    public boolean isMagical() {
+        return isMagical;
+    }
+    //מחזירה תיאור של החפץ
+    @Override
     public String toString() {
-        return "Name: " + name + "\nValue: " + value + "\nMagical item";
+        String result = "Name: " + name + "\nValue: " + value;
+        if (isMagical) {
+            result += "\nMagical item";
+        }
+        return result;
     }
 }

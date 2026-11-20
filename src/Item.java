@@ -7,12 +7,10 @@ public class Item {
     private int value;
     private boolean isMagical;
 
-
-    //
     public Item() {
-        this.name = "";
-        this.value = -1;
-        this.isMagical = true;
+        this.name = "Unknown";
+        this.value = 0;
+        this.isMagical = false;
     }
 
     public Item(String name, int value, boolean isMagical) {
@@ -42,6 +40,6 @@ public class Item {
     }
 
     public String toString() {
-        return "Name: " + name + "\nValue: " + value + "\n" + (isMagical ? "Magical item" : "Not magical");
+        return "Item Name: " + name + ", Cost: " + value;
     }
 }

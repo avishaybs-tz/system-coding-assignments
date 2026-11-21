@@ -26,4 +26,12 @@ public class Character {
     public int getLevel() {
         return level;
     }
+
+    public void levelUp() {
+        this.level++;
+    }
+
+    public void heal(int amount) {
+        this.health += amount;
+    }
 }

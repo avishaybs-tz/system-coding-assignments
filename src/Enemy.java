@@ -22,6 +22,6 @@ public class Enemy extends Character {
 
     @Override
     public String toString() {
-        return "Name: " + getName() + "\nHealth: " + getHealth() + "\nLevel: " + getLevel() + "\nDamage: " + damage;
+        return super.toString() + "\nDamage: " + damage;
     }
 }

@@ -19,4 +19,9 @@ public class Enemy extends Character {
     public boolean isBoss() {
         return isBoss;
     }
+
+    @Override
+    public String toString() {
+        return "Name: " + getName() + "\nHealth: " + getHealth() + "\nLevel: " + getLevel() + "\nDamage: " + damage;
+    }
 }

@@ -16,6 +16,19 @@ public class Player extends Character {
     }
 
     public void addItem(Item item) {
-        this.inventory[0] = item;
+        Item[] updated = new Item[inventory.length + 1];
+        for (int i = 0; i < inventory.length; i++) {
+            updated[i] = inventory[i];
+        }
+        updated[inventory.length] = item;
+        this.inventory = updated;
+    }
+
+    public int calculateInventoryValue() {
+        int sum = 0;
+        for (int i = 0; i < inventory.length; i++) {
+            sum += inventory[i].getValue();
+        }
+        return sum;
     }
 }

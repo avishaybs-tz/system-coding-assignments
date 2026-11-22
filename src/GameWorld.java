@@ -45,4 +45,9 @@ public class GameWorld {
         }
         return total;
     }
+
+    @Override
+    public String toString() {
+        return "World Name: " + name + "\nDifficulty: " + difficulty + "\nNumber of players: " + players.length;
+    }
 }

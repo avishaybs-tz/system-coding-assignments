@@ -33,8 +33,16 @@ public class GameWorld {
 
     public void printAllPlayers() {
         for (int i = 0; i < players.length; i++) {
+            System.out.println("------- Player " + (i + 1));
             System.out.println(players[i]);
         }
     }
-}
 
+    public int getTotalValueOfWorld() {
+        int total = 0;
+        for (int i = 0; i < players.length; i++) {
+            total += players[i].calculateInventoryValue();
+        }
+        return total;
+    }
+}

@@ -40,4 +40,18 @@ public class Player extends Character {
         }
         return false;
     }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder(super.toString());
+        sb.append("\nInventory: ");
+        for (int i = 0; i < inventory.length; i++) {
+            sb.append(inventory[i].getName());
+            if (i < inventory.length - 1) {
+                sb.append(" | ");
+            }
+        }
+        return sb.toString();
+    }
 }
+

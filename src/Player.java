@@ -31,4 +31,13 @@ public class Player extends Character {
         }
         return sum;
     }
+
+    public boolean hasMagicalItem() {
+        for (int i = 0; i < inventory.length; i++) {
+            if (inventory[i].isMagical()) {
+                return true;
+            }
+        }
+        return false;
+    }
 }

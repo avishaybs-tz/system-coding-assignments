@@ -21,4 +21,20 @@ public class GameWorld {
         this.enemies = enemies;
         this.difficulty = difficulty;
     }
+
+    public void addPlayer(Player player) {
+        Player[] updated = new Player[players.length + 1];
+        for (int i = 0; i < players.length; i++) {
+            updated[i] = players[i];
+        }
+        updated[players.length] = player;
+        this.players = updated;
+    }
+
+    public void printAllPlayers() {
+        for (int i = 0; i < players.length; i++) {
+            System.out.println(players[i]);
+        }
+    }
 }
+

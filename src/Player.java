@@ -54,4 +54,3 @@ public class Player extends Character {
         return sb.toString();
     }
 }
-
